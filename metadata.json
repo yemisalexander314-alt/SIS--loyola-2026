@@ -1,0 +1,6 @@
+{
+  "name": "SIS Loyola - Sistema de Información y Gestión Institucional",
+  "description": "Sistema institucional de gestión académica, matrícula, calificaciones, asistencia y finanzas del Instituto Técnico San Ignacio de Loyola F.M. (Fundado en 1970).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
