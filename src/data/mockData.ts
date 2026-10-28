@@ -377,3 +377,13 @@ export const INSTITUTIONAL_INFO = {
   email: 'administracion@sisloyola.hn',
   crestPath: '/assets/aistudio/Image_12_8a9fec3e.jpeg'
 };
+
+export const ENROLLMENT_GRADES = [
+  '7mo grado',
+  '8vo grado',
+  '9no grado',
+  '10mo grado',
+  '11vo BTPI',
+  '11vo en Humanidades',
+  '12vo BTPI'
+] as const;

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { X, UserPlus, CheckCircle2, ShieldCheck, AlertCircle } from 'lucide-react';
 import { Student, TechnicalTrack } from '../../types';
+import { ENROLLMENT_GRADES } from '../../data/mockData';
 
 interface NewEnrollmentModalProps {
   isOpen: boolean;
@@ -22,7 +23,7 @@ export const NewEnrollmentModal: React.FC<NewEnrollmentModalProps> = ({
   const [rne, setRne] = useState('0818-');
   const [gender, setGender] = useState<'M' | 'F'>('M');
   const [track, setTrack] = useState<TechnicalTrack>('BTP en Informática');
-  const [grade, setGrade] = useState('10mo Grado');
+  const [grade, setGrade] = useState<string>(ENROLLMENT_GRADES[0]);
   const [section, setSection] = useState('Sección A');
   const [guardianName, setGuardianName] = useState('');
   const [guardianPhone, setGuardianPhone] = useState('+504 ');
@@ -210,12 +211,11 @@ export const NewEnrollmentModal: React.FC<NewEnrollmentModalProps> = ({
                   onChange={(e) => setGrade(e.target.value)}
                   className="w-full px-2.5 py-1.5 bg-white border border-[#CBD5E1] rounded text-xs text-[#0F172A] focus:border-[#1D4ED8] outline-hidden"
                 >
-                  <option value="7mo Grado">7mo Grado</option>
-                  <option value="8vo Grado">8vo Grado</option>
-                  <option value="9no Grado">9no Grado</option>
-                  <option value="10mo Grado">10mo Grado</option>
-                  <option value="11mo Grado">11mo Grado</option>
-                  <option value="12mo Grado">12mo Grado</option>
+                  {ENROLLMENT_GRADES.map((gradeOption) => (
+                    <option key={gradeOption} value={gradeOption}>
+                      {gradeOption}
+                    </option>
+                  ))}
                 </select>
               </div>
             </div>
